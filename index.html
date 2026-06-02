@@ -187,41 +187,21 @@ footer{
 
 <!-- VIDEO CARDS -->
 
-<section class="videos">
-
-    <div class="card">
-        <img src="https://picsum.photos/600/350?1">
-        <div class="info">
-            <h3>Video Title</h3>
-            <p>121K Views</p>
-        </div>
+<div class="card">
+    <img id="memeImage">
+    <div class="info">
+        <h3 id="memeTitle">Loading...</h3>
     </div>
+</div>
 
-    <div class="card">
-        <img src="https://picsum.photos/600/350?2">
-        <div class="info">
-            <h3>Video Title</h3>
-            <p>95K Views</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="https://picsum.photos/600/350?3">
-        <div class="info">
-            <h3>Video Title</h3>
-            <p>210K Views</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="https://picsum.photos/600/350?4">
-        <div class="info">
-            <h3>Video Title</h3>
-            <p>88K Views</p>
-        </div>
-    </div>
-
-</section>
+<script>
+fetch("https://meme-api.com/gimme")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("memeImage").src = data.url;
+    document.getElementById("memeTitle").innerText = data.title;
+});
+</script>
 
 <footer>
 © 2026 Nemat Hub 
