@@ -6,30 +6,207 @@
 <title>Free Nemati Vidioes & Nemati Movie</title>
 
 <style>
-body{
+
+*{
     margin:0;
-    background:#000;
-    min-height:100vh;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
-.logo{
-    position:absolute;
-    top:20px;
-    right:20px;
+body{
+    background:#000;
+    color:#fff;
+}
+
+/* Header */
+
+header{
+    background:#111;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+    border-bottom:2px solid #ff9900;
 }
 
 .logo img{
-    width:350px;
+    width:250px;
     height:auto;
 }
-</style>
 
+.search-box{
+    flex:1;
+    max-width:500px;
+    margin:0 30px;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    background:#1d1d1d;
+    color:white;
+    outline:none;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#ff9900;
+}
+
+/* Banner */
+
+.banner{
+    height:200px;
+    background:linear-gradient(
+        90deg,
+        #111,
+        #ff9900
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.banner h1{
+    font-size:50px;
+}
+
+/* Videos */
+
+.section-title{
+    padding:25px;
+    font-size:28px;
+}
+
+.videos{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.video-card{
+    background:#111;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.video-card:hover{
+    transform:translateY(-5px);
+}
+
+.video-card img{
+    width:100%;
+    display:block;
+}
+
+.video-info{
+    padding:15px;
+}
+
+.video-info h3{
+    margin-bottom:10px;
+}
+
+.video-info p{
+    color:#aaa;
+}
+
+/* Footer */
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    padding:20px;
+    background:#111;
+    border-top:1px solid #222;
+}
+
+</style>
 </head>
+
 <body>
 
-<div class="logo">
-    <img src="ChatGPT Image Jun 2, 2026, 01_17_56 PM.png" alt="Nemat Hub">
-</div>
+<header>
+
+    <div class="logo">
+        <img src="ChatGPT Image Jun 2, 2026, 01_17_56 PM.png" alt="Nemat Hub">
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="جستجو در Nemat Hub ...">
+    </div>
+
+    <nav class="menu">
+        <a href="#">خانه</a>
+        <a href="#">ویدیوها</a>
+        <a href="#">انجمن</a>
+        <a href="#">گالری</a>
+    </nav>
+
+</header>
+
+<section class="banner">
+    <h1>Nemat Hub</h1>
+</section>
+
+<h2 class="section-title">جدیدترین محتوا</h2>
+
+<section class="videos">
+
+    <div class="video-card">
+        <img src="https://picsum.photos/600/350?1">
+        <div class="video-info">
+            <h3>عنوان محتوا</h3>
+            <p>توضیحات کوتاه محتوا</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <img src="https://picsum.photos/600/350?2">
+        <div class="video-info">
+            <h3>عنوان محتوا</h3>
+            <p>توضیحات کوتاه محتوا</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <img src="https://picsum.photos/600/350?3">
+        <div class="video-info">
+            <h3>عنوان محتوا</h3>
+            <p>توضیحات کوتاه محتوا</p>
+        </div>
+    </div>
+
+    <div class="video-card">
+        <img src="https://picsum.photos/600/350?4">
+        <div class="video-info">
+            <h3>عنوان محتوا</h3>
+            <p>توضیحات کوتاه محتوا</p>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Nemat Hub
+</footer>
 
 </body>
 </html>
